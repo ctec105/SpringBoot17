@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layouts/layout-base :: head"></head>
+<body>
+
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-header text-center">
+						Datos de <span th:text="${usuario.nombre}"></span>
+					</div>
+					<div class="card-body text-center">
+						<div class="row justify-content-center">
+							<div class="col-md-4 float-left">
+								<p>Nombre</p>
+								<p>Apellidos</p>
+								<p>Email</p>
+								<p>DNI</p>
+							</div>
+							<div class="col-md-8 float-right">
+								<p class="font-weight-light ml-4" th:text="${usuario.nombre}"></p>
+								<p class="font-weight-light ml-4" th:text="${usuario.apellidos}"></p>
+								<p class="font-weight-light ml-4" th:text="${usuario.email}"></p>
+								<p class="font-weight-light ml-4" th:text="${usuario.dni}"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+		<a th:href="@{/usuario/}">
+			<button class="btn btn-success">&laquo;volver</button>
+		</a>
+	</div>
+
+</body>
+</html>
